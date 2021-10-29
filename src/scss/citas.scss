@@ -1,0 +1,117 @@
+@import "variables";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.d-block{
+
+    width: 100%;
+}
+.heading{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.error{
+    background-color: $red-color;
+    border-radius: .5rem;
+    color: $white-color;
+    font-weight: bold; 
+    font-size: 1.2rem;
+    margin :.5rem 0;    
+    padding: .5rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+%btn{
+    cursor: pointer;
+    border-radius:.5rem ;
+    font-weight: bold;    
+    margin: .5rem 0;
+    padding: .5rem 1rem;
+    width: 50%;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 1rem auto;    
+    .row{
+        display: flex;
+        flex-flow: row wrap;
+        
+        .col{
+            display: flex;
+            flex: 1;
+            flex-flow: column wrap;
+            margin:1rem;
+            padding: 2rem;
+            // Clases para el formulario de citas
+            .citas-form{
+                background-color: $primary-color;
+                color:$white-color;
+                font-weight: bold;
+                padding: 1rem;
+                border-radius:.5rem ;
+                .form-group{
+                    margin: .5rem 0;
+                    .form-control{
+                        border-radius: .25rem;                                                        
+                        font-size:1.2rem;                
+                        padding:.4rem 1rem;
+                        width:100%;
+                        margin-top: .5rem;
+                        outline-color:$secondary-color ;
+                        
+                    }
+                }
+                .btn-submit{
+                    @extend %btn;
+                    background-color: $secondary-color;
+                    color: $white-color;
+                    transition:  all .3s ease;
+                    &:hover{
+                        background-color: $white-color;
+                        color: $secondary-color;
+                    }
+
+                }
+            }
+
+
+            // Clases para CitaItem
+
+            .cita-container{
+                border-radius: .5rem;
+                border-style:ridge;
+                border-color: $primary-color;
+                padding: 2rem;
+                margin-top: 1rem;
+
+                .cita-text{
+                    font-size: 1.2rem;
+                }
+
+                .btn-delete{
+                    @extend %btn;
+                    background-color:$red-color;
+                    color: $white-color;
+                    transition: all ease .3s;                    
+                    &:hover{
+                        background-color:$white-color;
+                        color: $red-color;
+                    }
+
+                }
+            }
+            
+        }
+    }
+
+}

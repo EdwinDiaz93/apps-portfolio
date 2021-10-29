@@ -1,0 +1,27 @@
+@import "variables";
+
+
+
+.navbar{
+    background-color: $primary-color;
+    padding: 1.5rem;
+    width: 100%;
+    .list-group{
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        .list-item{
+            flex: 1;
+            .list-link{
+                border-radius:.5rem;
+                color:$white-color;
+                padding: 1rem 2rem ;
+                text-decoration: none;
+                transition: all .5s ease;
+                &:hover{
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
